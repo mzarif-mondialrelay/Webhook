@@ -34,7 +34,7 @@ namespace RequestConsumerApi.Controllers
             }
 
             var currentTimestamp = (int)(DateTime.UtcNow.Subtract(new DateTime(1970, 1, 1))).TotalSeconds;
-            if (Math.Abs(currentTimestamp - requestTimestamp) > 60)
+            if (Math.Abs(currentTimestamp - requestTimestamp) > TimeLimit)
             {
                 return BadRequest("Timestamp is not within the last minute.");
             }
