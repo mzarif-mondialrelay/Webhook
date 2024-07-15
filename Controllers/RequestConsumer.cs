@@ -13,10 +13,39 @@ namespace RequestConsumerApi.Controllers
     {
         private const string Secret = "Your_Secret"; // Replace with your actual secret
         private const int TimeLimit = 60; // Replace with your own value of seconds
+        private const string strAuthorization = "Your_Authorization"; // Replace with your actual authorization string
+        private const bool useAuthorization = false; // set to true if you want to use Basic authorization 
 
         [HttpPost]
         public async Task<IActionResult> ConsumeRequest()
         {
+
+            if (useAuthorization)
+            {
+                // Extract Authorization header
+                if (!Request.Headers.TryGetValue("Authorization", out var authorizationHeaders))
+                {
+                    return Unauthorized("Missing Authorization header.");
+                }
+
+                var authorizationHeader = authorizationHeaders.ToString();
+
+                // Verify Authorization header format
+                if (!authorizationHeader.StartsWith("Basic "))
+                {
+                    return Unauthorized("Invalid Authorization header format.");
+                }
+
+                var base64String = authorizationHeader.Substring("Basic ".Length).Trim();
+                var decodedString = Encoding.UTF8.GetString(Convert.FromBase64String(base64String));
+
+                // Compare the decoded string with the expected authorization string
+                if (decodedString != strAuthorization)
+                {
+                    return Unauthorized("Invalid Authorization credentials.");
+                }
+            }
+
             // Extract headers
             if (!Request.Headers.TryGetValue("X-MR-TIMESTAMP", out var timestampHeaders) ||
                 !Request.Headers.TryGetValue("X-MR-SIGNATURE", out var signatureHeaders))

@@ -32,3 +32,4 @@ C:\Users\mzarif\RequestConsumerApi\obj\Debug\net8.0\refint\RequestConsumerApi.dl
 C:\Users\mzarif\RequestConsumerApi\obj\Debug\net8.0\RequestConsumerApi.pdb
 C:\Users\mzarif\RequestConsumerApi\obj\Debug\net8.0\RequestConsumerApi.genruntimeconfig.cache
 C:\Users\mzarif\RequestConsumerApi\obj\Debug\net8.0\ref\RequestConsumerApi.dll
+C:\Users\mzarif\RequestConsumerApi\obj\Debug\net8.0\RequestConsumerApi.sourcelink.json
