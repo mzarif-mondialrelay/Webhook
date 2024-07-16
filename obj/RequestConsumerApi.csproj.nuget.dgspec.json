@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\mzarif\\RequestConsumerApi\\RequestConsumerApi.csproj": {}
+    "C:\\Users\\mzarif\\RequestConsumerApi\\RequestConsumerApi.csproj": {}
   },
   "projects": {
-    "c:\\Users\\mzarif\\RequestConsumerApi\\RequestConsumerApi.csproj": {
+    "C:\\Users\\mzarif\\RequestConsumerApi\\RequestConsumerApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\mzarif\\RequestConsumerApi\\RequestConsumerApi.csproj",
+        "projectUniqueName": "C:\\Users\\mzarif\\RequestConsumerApi\\RequestConsumerApi.csproj",
         "projectName": "RequestConsumerApi",
-        "projectPath": "c:\\Users\\mzarif\\RequestConsumerApi\\RequestConsumerApi.csproj",
+        "projectPath": "C:\\Users\\mzarif\\RequestConsumerApi\\RequestConsumerApi.csproj",
         "packagesPath": "C:\\Users\\mzarif\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\mzarif\\RequestConsumerApi\\obj\\",
+        "outputPath": "C:\\Users\\mzarif\\RequestConsumerApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mzarif\\AppData\\Roaming\\NuGet\\NuGet.Config",
